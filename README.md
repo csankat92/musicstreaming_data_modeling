@@ -10,18 +10,18 @@ The schema designed is based off of a star schema structure. The schema design h
 
 ###### Fact Table
 
-- songplays - records in log data associated with song plays i.e. records with page NextSong
+- songplays - records in log data associated with song plays i.e. records with page NextSong<br />
   columns: songplay_id, start_time, user_id, level, song_id, artist_id, session_id, location, user_agent
   
 ###### Dimension Tables
 
-- users - users in the app
+- users - users in the app <br />
   columns: user_id, first_name, last_name, gender, level
   
-- songs - in music database
+- songs - in music database<br />
   columns: song_id, title, artist_id, year, duration
 
-- artists - artists in music database
+- artists - artists in music database<br />
   columns: artist_id, name, location, latitude, longitude
 
 #### Data Processing/ETL pipeline
