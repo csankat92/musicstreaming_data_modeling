@@ -1,7 +1,7 @@
 ## Data Modeling with Postgres Project
 
 #### Project Summary
-Sparkify has created a new music streaming application and wants to establish a Postgres DB to house their song and user activity data. The analytics team at Sparkify wants to analyze what songs users are listening to, but do not have a way to query the data. The data is currently resides in two types of JSON files, one type hosting the user_activity data and the other hosting song data. 
+Streaming (Company Name) has created a new music streaming application and wants to establish a Postgres DB to house their song and user activity data. The analytics team at Streaming wants to analyze what songs users are listening to, but do not have a way to query the data. The data is currently resides in two types of JSON files, one type hosting the user_activity data and the other hosting song data. 
 
 As the data engineer assigned to the project my goal is establish the Postgres DB schema and create an ETL pipeline that will pull the json objects into the designed schema.
 
@@ -30,7 +30,7 @@ The schema designed is based off of a star schema structure. The schema design h
 
 #### Data Processing/ETL pipeline
 
-1. Create Sparkify Database and Tables
+1. Create StreamingDB Database and Tables
 2. Use Pandas to read JSON files
 3. Use Pandas to modify data (Ex. Convert unix time into datatime format)
 3. Use psycopg2 to insert data into tables
@@ -47,12 +47,9 @@ The schema designed is based off of a star schema structure. The schema design h
 - create_tables.py: Python file that drops and creates tables; Run this script prior to running etl.py as it will 
   reset your tables.
 - etl.py: Python file that reads JSON objects, performs data transformations and loads data into tables.
-- etl.ipynb: Python notebook that reads a single JSON object, performs data transformations and loads data into tables.
-- test.ipynb: Python notebook used to run SELECT statements against database for testing purposes.
 - README.md: Markdown file outlining project and code.
 
 #### How to run the project
 
 1. Run create_tables.py in terminal to drop and create the tables.
 2. Run etl.py in terminal to load the json objects to the appropriate tables.
-3. Open test.ipynb and run queries to validate data has properly loaded.
