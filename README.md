@@ -6,7 +6,7 @@ Streaming (Company Name) has created a new music streaming application and wants
 As the data engineer assigned to the project my goal is establish the Postgres DB schema and create an ETL pipeline that will pull the json objects into the designed schema.
 
 #### Database Schema Design and Tables
-The schema designed is based off of a star schema structure. The schema design has a single fact table (songplay) and four dimensional tables (users, songs, artists and time) that reference columns in the fact table. 
+The schema designed is based off of a star schema structure. The schema design has a single fact table (songplay) and three dimensional tables (users, songs and artists) that reference columns in the fact table. 
 
 ###### Fact Table
 
@@ -21,12 +21,8 @@ The schema designed is based off of a star schema structure. The schema design h
 - songs - in music database
   song_id, title, artist_id, year, duration
 
-- artists in music database
+- artists - artists in music database
   artist_id, name, location, latitude, longitude
-
-- time - timestamps of records in songplays broken down into specific units
-  start_time, hour, day, week, month, year, weekday
-  
 
 #### Data Processing/ETL pipeline
 
