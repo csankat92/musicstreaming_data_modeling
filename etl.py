@@ -126,5 +126,5 @@ class etl():
 
 x = etl()
 conn, cur = x.connect_to_db()
-x.process_data(conn, cur, '/Users/christophersankat/PycharmProjects/data_modeling_project/song_data', x.process_song_file)
-x.process_data(conn, cur, '/Users/christophersankat/PycharmProjects/data_modeling_project/log_data', x.process_log_file)
+x.process_data(conn, cur, 'data/song_data', x.process_song_file)
+x.process_data(conn, cur, 'data/log_data', x.process_log_file)
