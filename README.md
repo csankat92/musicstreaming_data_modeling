@@ -1,4 +1,4 @@
-## Data Modeling with Postgres Project
+## Music Streaming Data Modeling Project
 
 #### Project Summary
 Streaming (Company Name) has created a new music streaming application and wants to establish a Postgres DB to house their song and user activity data. The analytics team at Streaming wants to analyze what songs users are listening to, but do not have a way to query the data. The data is currently resides in two types of JSON files, one type hosting the user_activity data and the other hosting song data. 
