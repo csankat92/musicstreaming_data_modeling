@@ -56,17 +56,6 @@ class etl():
         # filter by NextSong action
         self.df = self.df[self.df['page'] == 'NextSong']
 
-        # convert timestamp column to datetime
-        self.t = pd.to_datetime(self.df['ts'], unit='ms')
-
-        # insert time data records
-        self.time_data = (self.t, self.t.dt.hour, self.t.dt.day, self.t.dt.week, self.t.dt.month, self.t.dt.year, self.t.dt.weekday)
-        self.column_labels = ('start_time', 'hour', 'day', 'week', 'month', 'year', 'weekday')
-        self.time_df = pd.DataFrame.from_dict(dict(zip(self.column_labels, self.time_data)))
-
-        for i, row in self.time_df.iterrows():
-            self.cur.execute(time_table_insert, list(row))
-
         # load user table
         self.user_df = self.df[['userId', 'firstName', 'lastName', 'gender', 'level']]
 
