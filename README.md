@@ -47,5 +47,5 @@ The schema designed is based off of a star schema structure. The schema design h
 
 #### How to run the project
 
-1. Run create_tables.py in terminal to drop and create the tables.
+1. Run create_tables.py in terminal/powershell to drop and create the tables.
 2. Run etl.py in terminal/powershell to load the json objects to the appropriate tables.
