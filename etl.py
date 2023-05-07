@@ -4,7 +4,6 @@ import psycopg2
 import pandas as pd
 from sql_queries import *
 
-
 class etl():
 
     def connect_to_db(self):
