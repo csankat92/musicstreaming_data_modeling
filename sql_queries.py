@@ -72,8 +72,6 @@ artist_table_insert = (""" INSERT INTO artists (artist_id, name, location, latit
                             , latitude = EXCLUDED.latitude
                             , longitude = EXCLUDED.longitude""")
 
-
-
 # FIND SONGS
 
 song_select = ("""SELECT song_id, songs.artist_id
