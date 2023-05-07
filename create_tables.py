@@ -51,8 +51,6 @@ class table_creation():
             self.conn.commit()
 
 
-
-
 x = table_creation()
 cur, conn = x.create_database()
 x.drop_tables(cur,conn)
